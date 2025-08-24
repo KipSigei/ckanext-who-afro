@@ -4,6 +4,7 @@
 
 {% block promoted_toolbar %}
 
+
 <div class="dataset promoted-background promoted-breadcrumbs">
     {% snippet 'package/snippets/promoted_plus.html' %}
     <div class="container">
@@ -25,9 +26,6 @@
                               </span>
                             {% endif %}
                             <span class="badge">{{_(dataset_type_title)}}</span>
-                            <span class="modified">
-                                {{_('Modified')}} {{ h.time_ago_from_timestamp(pkg.metadata_modified) }} by {{ h.get_last_modifier(pkg.id) }} &middot; Downloads: {{ h.get_package_stats(pkg.id) }}
-                            </span>
                             <div class="description">
                                 {%- set notes = h.render_markdown(h.get_translated(pkg, 'notes')) -%}
                                 {{ notes | truncate(430)}}
