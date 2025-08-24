@@ -137,10 +137,22 @@ def get_recently_updated_datasets():
 
 
 def get_last_modifier(package_id):
-    package_activity = toolkit.get_action("package_activity_list")(
-        data_dict={"id": package_id}
-    )
-    return get_user_from_id(package_activity[0]["user_id"])
+    """Return last modifier display name or empty string if none."""
+    context = {"ignore_auth": True}
+    try:
+        acts = toolkit.get_action("package_activity_list")(context, {"id": package_id, "limit": 1})
+    except Exception:
+        acts = []
+    if not acts:
+        return ""
+    uid = acts[0].get("user_id") or ""
+    if not uid:
+        return ""
+    try:
+        user = toolkit.get_action("user_show")(context, {"id": uid})
+        return user.get("display_name") or user.get("name") or ""
+    except Exception:
+        return ""
 
 
 def format_locale(locale):
