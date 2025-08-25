@@ -1451,7 +1451,7 @@ a.tag:hover  {
     background: #171B38;
 }
 
-.hero > div.col-md-6 {
+.hero .col-md-6 {
     width: 100% !important;
 }
 
