@@ -20,7 +20,10 @@
                     {% else %}
                         {{_('The Regional Health Data Hub is a secured cloud-based platform designed to strengthen health information systems by integrating existing data sources into a central data lake for better standardization, cross analysis and evidence generation.')}}
                     {% endif %}
-                    <a href="{{ h.url_for('home.about') }}">{{ _('Learn more') }}</a>
+                    <a href="{{ h.url_for('home.about') }}" class="learn-more-btn">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        {{ _('Learn more') }}
+                    </a>
                 </p>
             </div>
         </div>
@@ -29,7 +32,7 @@
         <div class="promoted-goals row">
             <div class="col-lg-4 col-xs-12 col-sm-12">
                 <div id="UniversalHealthCoverage" class="goal-container">
-                    <div>
+                    <div class="goal-overlay">
                         <a href="{{ h.url_for('dataset.search') + '?q=programme:(hiv%20OR%20malaria%20OR%20tb%20OR%20blood-pressure%20OR%20ncd%20OR%20vpd)' }}" class="description">
                             <i class="fa-solid fa-globe"></i> {{ _('Universal Health Coverage') }}
                             <i class="fa-solid fa-arrow-right"></i>
@@ -39,7 +42,7 @@
             </div>
             <div class="col-lg-4 col-xs-12 col-sm-12">
                 <div id="HealthSecurity" class="goal-container">
-                    <div>
+                    <div class="goal-overlay">
                         <a href="{{ h.url_for('dataset.search') + '?q=programme:(idsr%20OR%20amr)' }}" class="description">
                             <i class="fa-solid fa-shield-heart"></i> {{ _('Health Security') }}
                             <i class="fa-solid fa-arrow-right"></i>
@@ -49,7 +52,7 @@
             </div>
             <div class="col-lg-4 col-xs-12 col-sm-12">
                 <div id="HealthierPopulations" class="goal-container">
-                    <div>
+                    <div class="goal-overlay">
                         <a href="{{ h.url_for('dataset.search') + '?q=programme:(climate%20OR%20tobacco%20OR%20vid)' }}" class="description">
                             <i class="fa-solid fa-users"></i> {{ _('Healthier Populations') }}
                             <i class="fa-solid fa-arrow-right"></i>
@@ -93,7 +96,7 @@
         <div class="promoted-progress col-lg-12 col-xs-12 col-sm-12">
             <h1>{{ _('Triple billion progress') }}</h1>
             <div class="promoted-progress-row row">
-                <iframe class="promoted-dashboard" title="rhdh_frontend2" width="100%" src=https://app.powerbi.com/view?r=eyJrIjoiNjBmNDBjYTUtOWFlMi00ODQ2LThlZDktNDkzZDUyOGRiZTU2IiwidCI6ImY2MTBjMGI3LWJkMjQtNGIzOS04MTBiLTNkYzI4MGFmYjU5MCIsImMiOjh9 frameborder="0" allowFullScreen="true"></iframe>
+                <iframe class="promoted-dashboard" title="rhdh_frontend2" width="100%" src=https://app.powerbi.com/view?r=eyJrIjoiNjMwOTA0MTUtNDgwNC00ZjY0LWI5ZjMtZmZlYWU2ODZhMjRlIiwidCI6ImY2MTBjMGI3LWJkMjQtNGIzOS04MTBiLTNkYzI4MGFmYjU5MCIsImMiOjh9 frameborder="0" allowFullScreen="true"></iframe>
             </div>
         </div>
         <div class="other-insights-btn">
