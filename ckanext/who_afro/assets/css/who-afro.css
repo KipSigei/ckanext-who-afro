@@ -1446,12 +1446,12 @@ a.tag:hover  {
 .homepage .main,
 .homepage .hero,
 .groups .main,
-.groups .hero{
+.groups .hero {
     padding: 5px;
     background: #171B38;
 }
 
-.homepage .main .hero .col-md-6 {
+.hero > div.col-md-6 {
     width: 100% !important;
 }
 
@@ -3918,6 +3918,7 @@ div.sources-page > div.container div.row {
     transition: all 0.3s ease;
     display: inline-block;
     margin-top: 16px;
+    float: right;
 }
 
 .promoted .description a:hover {
