@@ -509,7 +509,7 @@ div[role=main]{
 
 .account-masthead {
   height: var(--account-masthead-height);
-  background: var(--who-blue-25-percent);
+  background: #171B38;
 }
 
 .account-masthead .account ul li a {
@@ -576,7 +576,6 @@ div[role=main]{
     position: relative;
     margin: 80px 0;
     z-index: 2;
-    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(240,245,255,0.9) 100%);
     border-radius: 16px;
     padding: 40px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
@@ -599,8 +598,8 @@ div[role=main]{
 }
 
 .promoted-left {
-    margin-top: 5%;
-    padding-left: 0;
+    margin-top: 0;
+    padding: 0;
 }
 
 .promoted-right {
@@ -1448,7 +1447,8 @@ a.tag:hover  {
 .homepage .hero,
 .groups .main,
 .groups .hero{
-    padding: 0px;
+    padding: 5px;
+    background: #171B38;
 }
 
 .site-footer .desc {
@@ -1843,7 +1843,7 @@ p.description a {
     z-index: 1;
     padding: 0;
     margin-top: 48px;
-    gap: 24px;
+    gap: 0;
 }
 
 @media (max-width: 992px) {
@@ -1957,15 +1957,20 @@ p.description a {
 
 /* Promoted quick access */
 .promoted-quick-access {
-    margin-left: auto;
+    margin-left: 0;
+    margin-top: 20px;
     z-index: 2;
+}
+
+.promoted-progress > h1 {
+    color: #fff;
 }
 
 .promoted-quick-access > h1.headline {
     font-weight: 700;
     font-size: 52px;
     line-height: 60px;
-    color: var(--primary-navy);
+    color: #fff;
     margin-bottom: 40px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
@@ -2033,7 +2038,7 @@ p.description a {
     line-height: 60px;
     text-align: center;
     margin-bottom: 40px;
-    color: var(--primary-navy);
+    color: #fff;
     text-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
