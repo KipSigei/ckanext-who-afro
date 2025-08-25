@@ -1451,6 +1451,10 @@ a.tag:hover  {
     background: #171B38;
 }
 
+.homepage .main .hero .col-md-6 {
+    width: 100% !important;
+}
+
 .site-footer .desc {
     color: var(--who-blue-25-percent);
     margin-bottom: 0px;
