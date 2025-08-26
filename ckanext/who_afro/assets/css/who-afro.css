@@ -1473,6 +1473,10 @@ a.tag:hover  {
     display: none !important;
 }
 
+.homepage .module-search {
+    display: none !important;
+}
+
 
 @media only screen and (max-width: 575px) {
     .desc-mobile {
