@@ -88,12 +88,14 @@ class WHOAFROPlugin(plugins.SingletonPlugin, DefaultTranslation):
 
     # IResourceController
     def before_resource_create(self, context, resource):
-        who_afro_upload.handle_giftless_uploads(context, resource)
-        return resource
+        # who_afro_upload.handle_giftless_uploads(context, resource)
+        # return resource
+        return
 
     def before_resource_update(self, context, current, resource):
-        who_afro_upload.handle_giftless_uploads(context, resource, current=current)
-        return resource
+        # who_afro_upload.handle_giftless_uploads(context, resource, current=current)
+        # return resource
+        return
 
     # IActions
     def get_actions(self):

@@ -16,7 +16,11 @@
                             <p class="subtitle"> {{_('Home')}} / {{_(dataset_type)}} </p>
                             <h1 class="headline">{{_('New {dataset_type}').format(dataset_type=dataset_type)}}</h1>
                         {%- else -%}
-                            {%- set dataset_type_title = h.scheming_get_dataset_schema(pkg.type).get('name', pkg.type) -%}
+                            {%- if pkg and pkg.type -%}
+                              {%- set dataset_type_title = (h.scheming_get_dataset_schema(pkg.type) or {}).get('name', pkg.type) -%}
+                            {%- else -%}
+                              {%- set dataset_type_title = 'Dataset' -%}
+                            {%- endif -%}
                             <p class="subtitle"> {{_('Home')}} / {{_(dataset_type_title)}} </p>
                             <h1 class="headline">{% link_for pkg.title, named_route=pkg.type ~ '.read', id=pkg.name, title=pkg.title %}</h1>
                             {% if pkg.private %}
