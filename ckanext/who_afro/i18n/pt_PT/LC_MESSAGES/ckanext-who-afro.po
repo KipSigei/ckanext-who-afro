@@ -2474,7 +2474,7 @@ msgstr "Selecionar"
 #: ../ckan/ckan/templates/group/admins.html:3
 #: ../ckan/ckan/templates/group/admins.html:6
 #: ../ckan/ckan/templates/organization/admins.html:3
-#: ../ckan/ckan/templates/organization/admins.html:6
+#: ../ckan/ckan/templates/admins.html:6
 msgid "Administrators"
 msgstr "Administradores"
 
